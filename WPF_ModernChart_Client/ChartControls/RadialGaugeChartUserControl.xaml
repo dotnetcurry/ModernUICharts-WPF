@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="WPF_ModernChart_Client.ChartControls.RadialGaugeChartUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+              xmlns:ModernChart="clr-namespace:De.TorstenMandelkow.MetroChart;assembly=De.TorstenMandelkow.MetroChart"
+             mc:Ignorable="d" Height="443.233" Width="900.083">
+    <Grid ShowGridLines="True">
+        <ScrollViewer VerticalScrollBarVisibility="Visible"
+
+                   HorizontalScrollBarVisibility="Visible">
+            <ModernChart:RadialGaugeChart ChartTitle="Sales Chart"
+                                      ChartSubTitle="Territory wise sales Chart" Margin="0,10,0,28">
+                <ModernChart:RadialGaugeChart.Series>
+                    <ModernChart:ChartSeries SeriesTitle="The Sales Chart"
+                                          DisplayMember="Name" Width="800" Height="400"
+                                          ValueMember="Sales" 
+                                          ItemsSource="{Binding}">
+                    </ModernChart:ChartSeries>
+                </ModernChart:RadialGaugeChart.Series>
+            </ModernChart:RadialGaugeChart>
+        </ScrollViewer>
+    </Grid>
+</UserControl>
